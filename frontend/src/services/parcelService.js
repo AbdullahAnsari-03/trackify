@@ -1,10 +1,6 @@
 import axios from "axios";
-import dotenv from dotenv;
-import os from os;
 
-load_dotenv();
-const API_URL_LINK = os.getenv(VITE_API_URL);
-const API_URL = "http://${'API_URL_LINK'}api/parcels";
+const API_URL = "http://trackify-production-2a4c.up.railway.app/api/parcels";
 
 export const getParcels = async () => {
   const res = await axios.get(API_URL);
