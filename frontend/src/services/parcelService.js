@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://trackify-production-2a4c.up.railway.app/api/parcels";
+const API_URL = "https://trackify-production-2a4c.up.railway.app/api/parcels";
 
 export const getParcels = async () => {
   const res = await axios.get(API_URL);
