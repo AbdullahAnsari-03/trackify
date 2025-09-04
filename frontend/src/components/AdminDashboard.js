@@ -7,7 +7,7 @@ function AdminDashboard() {
 
   const fetchStats = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/parcels/analytics");
+      const { data } = await axios.get("http://trackify-production-2a4c.up.railway.app/api/parcels/analytics");
       setStats(data);
     } catch (error) {
       console.error("Error fetching analytics:", error);

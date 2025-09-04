@@ -15,7 +15,7 @@ const ResidentView = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/parcels/flat/${wingflatno}`
+        `http://trackify-production-2a4c.up.railway.app/api/parcels/flat/${wingflatno}`
       );
       setParcels(res.data);
     } catch (err) {
