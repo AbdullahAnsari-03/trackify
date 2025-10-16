@@ -1,13 +1,22 @@
 // src/components/AdminDashboard.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AdminDashboard() {
   const [stats, setStats] = useState(null);
+  const navigate = useNavigate();
+
+   useEffect(() => {
+    const token = localStorage.getItem("adminToken");
+    if(!token){
+      navigate("/admin-login");
+    }
+  },[navigate]);
 
   const fetchStats = async () => {
     try {
-      const { data } = await axios.get("https://trackify-production-2a4c.up.railway.app/api/parcels/analytics");
+      const { data } = await axios.get("https://trackify-45q3.onrender.com/api/parcels/analytics");
       setStats(data);
     } catch (error) {
       console.error("Error fetching analytics:", error);

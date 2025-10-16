@@ -22,6 +22,8 @@ app.use("/api/users", userRoutes);
 const parcelRoutes = require("./routes/parcelRoutes");
 app.use("/api/parcels", parcelRoutes);
 
+const authRoutes = require("./routes/authRoutes");
+app.use("/api/auth", authRoutes);
 
 // Test Route
 app.get("/", (req, res) => {

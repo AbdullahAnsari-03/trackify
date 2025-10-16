@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import Dashboard from "./components/Dashboard";
 import AdminDashboard from "./components/AdminDashboard"; // ✅ Import new admin page
+import AdminLogin from "./components/AdminLogin";
+
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           }
         />
 
+        <Route path="/admin-login" element={<AdminLogin />} />
+
         {/* Admin Dashboard Page */}
         <Route
           path="/admin"
@@ -35,6 +39,7 @@ function App() {
             </div>
           }
         />
+
       </Routes>
     </Router>
   );

@@ -85,7 +85,7 @@ function Dashboard() {
             </button>
             <button
               className="px-4 py-2 rounded-lg bg-blue-600 text-white shadow-lg hover:bg-blue-500 transition-all text-sm sm:text-base"
-              onClick={() => navigate("/admin")}
+              onClick={() => navigate("/admin-login")}
             >
               Admin Dashboard
             </button>
@@ -124,7 +124,7 @@ function Dashboard() {
             </button>
             <button
               className="px-4 py-2 rounded-lg bg-blue-600 text-white shadow-lg hover:bg-blue-500 transition-all text-sm"
-              onClick={() => { navigate("/admin"); setMenuOpen(false); }}
+              onClick={() => { navigate("/admin-login"); setMenuOpen(false); }}
             >
               Admin Dashboard
             </button>
